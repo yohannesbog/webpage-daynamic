@@ -1,0 +1,27 @@
+
+nav {
+    display: block;
+    height: 100px;
+
+
+}
+nav h1{
+    display:inline;
+    float:left;
+    text-align: center;
+    padding: 20px;
+    }
+nav h2{
+    display:inline;
+    float:left;
+    text-align: center;
+    padding: 20px;
+
+    }
+nav h3{
+        display:inline;
+        float:left;
+        text-align: center;
+        padding: 20px;
+
+        }

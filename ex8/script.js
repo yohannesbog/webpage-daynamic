@@ -17,5 +17,6 @@ val.addEventListener('click', function() {
 
     listItem.appendChild(newText);
     todo.appendChild(listItem)
+    console.log(todo)
 
 })
