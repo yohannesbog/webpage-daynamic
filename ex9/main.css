@@ -1,28 +1,96 @@
 
+
+body {
+    margin: 20px;
+}
 nav {
     display: block;
     height: 100px;
-
+    padding-top: 50px
 
 }
-nav h1{
+nav h1, h2, h3{
     display:inline;
     text-align: center;
     padding: 20px;
-
+    font-size: 2.5em
     
     }
-nav h2{
-    display:inline;
-    text-align: center;
-    padding: 20px;
 
-
+    p {
+        font-size: 1.4em
     }
-nav h3{
-        display:inline;
-        text-align: center;
-        padding: 20px;
 
+    #btn-primary {
+        display: flex;
+        align-items: center;
+        background-color: dodgerblue;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
 
-        }
+    .form-popup {
+      display: flex;
+      align-items: center;
+      margin: auto
+    }
+    .form-container {
+        max-width: 400px;
+        max-height: 1000px;
+
+        padding: 10px;
+        background-color: rgb(123, 114, 131);
+        align-items: center;
+        margin: auto
+      }
+
+      .form-container input[type=title] {
+        width: 70%;
+        padding: 15px;
+        margin: 5px 0 10px 30px;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      .form-container input[type=comment] {
+        width: 70%;
+        padding: 15px;
+        margin: 5px 0 10px 0px;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      .submit {
+        width: 70%;
+        padding-top: 15px;
+        margin: 10px 0 10px 60px;
+        border: none;
+        background:rgb(29, 197, 29);
+        align-items: center;
+        font-size: 24px
+
+        /* margin: auto */
+      }
+      .cancel {
+        width: 70%;
+        padding-top: 15px;
+        margin: 10px 0 10px 60px;
+        border: none;
+        background:rgb(230, 25, 69);
+        align-items: center;
+        font-size: 24px
+        /* margin: auto */
+      }
+/* 
+      .form-container input[type=submit] {
+        width: 50px;
+        height: 50px;
+        padding-top: 50px;
+        margin: 5px 0 10px 0;
+
+        /* padding: 15px;
+        margin: 5px 0 10px 0;
+        border: none;
+        background: rgb(161, 33, 33); */
+      /* } 

@@ -115,3 +115,133 @@ maindiv.appendChild(div4)
 p6.style.backgroundColor = 'orange'
 
 var x = document.querySelectorAll('p')
+
+
+
+// create button
+var button = document.createElement('button')
+button.setAttribute('type', 'button')
+button.setAttribute('class', 'btn btn-primary')
+button.setAttribute('id', 'btn-primary')
+button.setAttribute('style', 'align:center')
+button.setAttribute('onclick', 'openForm()')
+
+var span = document.createElement('span')
+
+span.setAttribute('class', 'span')
+span.innerHTML = 'MY BUTTON'
+button.appendChild(span)
+// button.style.alignItems = "center"
+button.style.margin = 'auto'
+document.body.append(button);
+console.log(button)
+
+
+
+
+
+
+const formdiv = document.createElement('div')
+formdiv.setAttribute('class', 'form-popup')
+formdiv.setAttribute('id', 'myForm')
+
+// //create form
+const formf = document.createElement('form')
+formf.setAttribute('class', 'form-container')
+formf.setAttribute('action', '/action_page.php')
+// formdiv.appendChild(formf)
+// //create h1
+const h1f = document.createElement('h1')
+h1f.innerHTML =('Comment Form')
+h1f.style.textAlign='center'
+// formf.appendChild(h1f)
+
+//create label
+const label1 = document.createElement('label')
+label1.setAttribute('for', 'email')
+label1.innerHTML=('Title')
+// formf.appendChild(label)
+
+
+//create input
+const input1 = document.createElement('input')
+input1.setAttribute('type', 'title')
+input1.setAttribute('placeholder', 'type your title')
+
+
+//create label
+const label2 = document.createElement('label')
+label2.setAttribute('type', 'comment')
+label2.innerHTML=('comment')
+// formf.appendChild(label)
+
+
+//create input
+const input2 = document.createElement('input')
+input2.setAttribute('type', 'comment')
+input2.setAttribute('placeholder', 'type your comment')
+
+const submit = document.createElement('button')
+ submit.setAttribute('type', 'button')
+ submit.setAttribute('class', 'submit')
+submit.innerHTML ='Submit'
+
+ const cancel = document.createElement('button')
+ cancel.setAttribute('type', 'button')
+ cancel.setAttribute('class', 'cancel')
+  cancel.innerHTML = 'Cancel'
+
+formf.appendChild(h1f)
+formf.appendChild(label1)
+formf.appendChild(input1)
+formf.appendChild(label2)
+formf.appendChild(input2)
+formf.appendChild(submit)
+formf.appendChild(cancel)
+formdiv.appendChild(formf)
+
+
+
+function openForm() {
+document.body.appendChild(formdiv)
+  formdiv.style.display = "block";
+  button.style.display = "none"
+ input1.value= ''
+ input2.value= ''
+
+}
+
+
+submit.addEventListener('click', function() {
+  var newh= document.createElement('h2')
+  var newp= document.createElement('p')
+  newh.style.color = 'green'
+  val1 = input1.value;
+  val2 = input2.value;
+  if (val1 !== '' && val2 !== ''){
+   var newText1 = document.createTextNode(val1);
+  var newText2 = document.createTextNode(val2);
+  newh.appendChild(newText1)
+  newp.appendChild(newText2)
+
+  maindiv.appendChild(newh)
+  maindiv.appendChild(newp)
+
+
+  formdiv.style.display = "none";
+  button.style.display = "block"
+  
+  } else {
+    alert('Please fill all fields')
+
+  
+  }
+
+  })
+
+  cancel.addEventListener('click', function() {
+    formdiv.style.display = "none";
+    button.style.display = "block"
+
+    })
+  
