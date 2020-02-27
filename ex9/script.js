@@ -218,7 +218,7 @@ submit.addEventListener('click', function() {
   newh.style.color = 'green'
   val1 = input1.value;
   val2 = input2.value;
-  if (val1 !== '' && val2 !== ''){
+  if (val1 != '' && val2 != ''){
    var newText1 = document.createTextNode(val1);
   var newText2 = document.createTextNode(val2);
   newh.appendChild(newText1)
